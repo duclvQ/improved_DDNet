@@ -6,7 +6,7 @@
 
 'pip -r install requirements.txt'
 
-## download train/test.pickle to folder "data"
+## download train/test.pickle to folder "data", and the folder "pose_new_v2" which contains the skeleton file of all videos to root folder
 data/COBOT/train.pickle     
 ........../test.pickle
 
