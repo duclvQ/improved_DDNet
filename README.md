@@ -11,7 +11,7 @@ data/COBOT/train.pickle
 ........../test.pickle
 
 ## Training
-'python train.py  --run_name {run name} # replace find the list of "run_name" in "models/DDNet_Original.py" '
+'python train.py  --run_name {run name} #  find the list of "run_name" in "models/DDNet_Original.py" '
 
 ## Online test
 Visit 'online.py' and then set the value of 'exp' corresponding to run_name in the previous step, this action will return a folder of numpy files for all video in test list.
