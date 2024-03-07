@@ -45,7 +45,7 @@ torch.backends.cudnn.benchmark = False
 
 # In[ ]:
 
-parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
+parser = argparse.ArgumentParser(description='_')
 parser.add_argument('--run_name', type=str, default='RN50')
 run_name = parser.parse_args().run_name
 
@@ -57,6 +57,7 @@ run_name = parser.parse_args().run_name
 
 # In[4]:
 
+# description of actions
 
 prefix = "A person "
 list_of_texts = [
@@ -105,7 +106,7 @@ len(list_of_texts)
 
 
 # In[5]:
-
+# reordering the list of texts
 
 list_of_labels  = ['START',
 'STOP',
@@ -147,12 +148,10 @@ print(list_of_texts_sorted)
 
 # In[6]:
 
-
-model_text_name = "RN50"
+# set device, always use cuda
 device = "cuda:0"
 
 def text_prompt_openai_random():
-
     return clip.tokenize(list_of_texts_sorted)
 
 
@@ -170,7 +169,7 @@ token_list = token_list.to(device)
 
 # In[7]:
 
-
+# set up logging, and result saving
 sys.path.insert(0, './pytorch-summary/torchsummary/')
 from torchsummary import summary  # noqa
 
@@ -236,12 +235,7 @@ def train(args, model, text_model, token_list, device, train_loader, optimizer, 
         output, _features = model(M, P)
         # get target token
         label_g = gen_label(target)
-        # target_token_list = list()
-        # for i in range(target.size(0)):
-        #     target_token_list.append(token_list[target[i].item()])
-        # target_token_list = torch.tensor(np.array(target_token_list))
-        # target_token_list = target_token_list.to(device)
-        # text_embedding = text_model(target_token_list).float()
+        
         text_embedding = list()
         for i in  range(target.size(0)):
             text_embedding.append(text_embedding_list[target[i]])
@@ -260,10 +254,11 @@ def train(args, model, text_model, token_list, device, train_loader, optimizer, 
         _, predicted = torch.max(output, 1)
         correct += (predicted == target).sum().item()
         #print("correct:", correct)
+        # using KL loss when training
         loss = criterion(output, target) + 0.1*(loss_imgs + loss_texts)/ 2
+        # the below loss is CE loss, used for original DDNet, uncomment it if you want to use it
         #loss = criterion(output, target) 
-
-        #loss = criterion(output, target)
+        
         train_loss += loss.detach().item()
         loss.backward(retain_graph=True)
         optimizer.step()
@@ -471,16 +466,3 @@ if __name__ == '__main__':
                                                                 ((end - start) / (X_0_t.shape[0])), d))
             print(msg)
             logging.info(msg)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
