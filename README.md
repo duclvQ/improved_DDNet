@@ -7,7 +7,7 @@
 'pip -r install requirements.txt'
 
 ## download train/test.pickle to folder "data"
-data/COBOT/train.pickle
+data/COBOT/train.pickle     
 ........../test.pickle
 
 ## Training
