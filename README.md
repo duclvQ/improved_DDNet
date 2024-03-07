@@ -7,8 +7,9 @@
 'pip -r install requirements.txt'
 
 ## download train/test.pickle to folder "data", and the folder "pose_new_v2" which contains the skeleton file of all videos to root folder
-data/COBOT/train.pickle     
-........../test.pickle
+./data/COBOT/train.pickle     
+.data/COBOT/test.
+./pose_new_v2
 
 ## Training
 'python train.py  --run_name {run name} #  find the list of "run_name" in "models/DDNet_Original.py" '
