@@ -8,7 +8,7 @@
 
 ## download train/test.pickle to folder "data", and the folder "pose_new_v2" which contains the skeleton file of all videos to root folder
 ./data/COBOT/train.pickle     
-.data/COBOT/test.
+.data/COBOT/test.      
 ./pose_new_v2
 
 ## Training
