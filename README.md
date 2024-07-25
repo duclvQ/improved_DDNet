@@ -18,6 +18,8 @@ pip -r install requirements.txt
 ```sh
 python train.py  --run_name {run name} #  find the list of "run_name" in "models/DDNet_Original.py" 
 ```
+## Evaluation
+find pretrained weights at this ['link'](https://drive.google.com/drive/folders/1zZFcmdyBLaPQJrcfiI2OjW3QH0qAar5B?usp=sharing).
 ## Online test
 Visit 'online.py' then set the value of 'exp' corresponding to run_name in the previous step, this action will return a folder of numpy files for all videos in test list.
 
