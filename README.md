@@ -8,7 +8,7 @@ git clone https://github.com/duclvQ/improved_DDNet.git
 cd your-repository
 pip -r install requirements.txt
 ```
-## download train/test.pickle from [`here`](https://drive.google.com/file/d/1ymfLTFaUOsoRWN51iomPHei5vObc-5mM/view?usp=sharing) to folder "data", and the [`skeleton_folder`](https://drive.google.com/file/d/1E8oAt4OI9zKblwNON-o7Wts9FfxrcWRR/view?usp=sharing)"pose_new_v2":
+## download train/test.pickle from [`here`](https://drive.google.com/file/d/1ymfLTFaUOsoRWN51iomPHei5vObc-5mM/view?usp=sharing) to folder "data", and the "pose_new_v2" from [`here`](https://drive.google.com/file/d/1E8oAt4OI9zKblwNON-o7Wts9FfxrcWRR/view?usp=sharing):
 # Location.
 ./data/COBOT/train.pickle     
 ./data/COBOT/test.pickle   
