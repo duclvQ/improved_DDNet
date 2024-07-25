@@ -7,7 +7,7 @@ git clone https://github.com/duclvQ/improved_DDNet.git
 # Navigate to the project directory
 cd your-repository
 pip -r install requirements.txt
-
+```
 ## download train/test.pickle from [`here`](https://drive.google.com/file/d/1ymfLTFaUOsoRWN51iomPHei5vObc-5mM/view?usp=sharing) to folder "data", and the [`skeleton_folder`](https://drive.google.com/file/d/1E8oAt4OI9zKblwNON-o7Wts9FfxrcWRR/view?usp=sharing)"pose_new_v2":
 # Location.
 ./data/COBOT/train.pickle     
@@ -17,7 +17,7 @@ pip -r install requirements.txt
 ## Training
 ```sh
 python train.py  --run_name {run name} #  find the list of "run_name" in "models/DDNet_Original.py" 
-
+```
 ## Online test
 Visit 'online.py' then set the value of 'exp' corresponding to run_name in the previous step, this action will return a folder of numpy files for all videos in test list.
 
