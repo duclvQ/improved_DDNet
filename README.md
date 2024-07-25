@@ -5,7 +5,7 @@
 # Clone the repository
 git clone https://github.com/duclvQ/improved_DDNet.git
 # Navigate to the project directory
-cd your-repository
+cd improved_DDNet
 pip -r install requirements.txt
 ```
 ## download train/test.pickle from [`here`](https://drive.google.com/file/d/1ymfLTFaUOsoRWN51iomPHei5vObc-5mM/view?usp=sharing) to folder "data", and the "pose_new_v2" from [`here`](https://drive.google.com/file/d/1E8oAt4OI9zKblwNON-o7Wts9FfxrcWRR/view?usp=sharing):
